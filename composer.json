@@ -1,11 +1,11 @@
 {
-    "name": "extract",
-    "description": "Allows to extract archive from the web interface",
+    "name": "audio_converter",
+    "description": "Allows you to convert audio files from the web interface",
     "type": "project",
     "license": "AGPL",
     "authors": [
         {
-            "name": "Paul Lereverend"
+            "name": "Boyd Densmore"
         }
     ],
     "require": {

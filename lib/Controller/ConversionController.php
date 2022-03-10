@@ -1,5 +1,5 @@
 <?php
-namespace OCA\Video_Converter\Controller;
+namespace OCA\Audio_Converter\Controller;
 
 use OCP\IRequest;
 use OCP\AppFramework\Http\TemplateResponse;

@@ -4,7 +4,7 @@ $(document).ready(function () {
             OCA.Files.fileActions.registerAction({
                 name: 'convert',
                 displayName: 'Convert into',
-                mime: 'video',
+                mime: 'audio',
                 permissions: OC.PERMISSION_UPDATE,
                 type: OCA.Files.FileActions.TYPE_DROPDOWN,
                 iconClass: 'icon-convert',
@@ -112,14 +112,14 @@ $(document).ready(function () {
                         + '<input type="checkbox" id="movflags" name="faststart" checked>'
                         + '</div></div>'
                         + '<p class="vc-label urldisplay" id="text" style="display: inline; margin-right: 10px;">'
-                        + t('video_converter', 'Choose the output format:')
+                        + t('audio_converter', 'Choose the output format:')
                         + ' <em></em>'
                         + '</p>'
                         + '<div class="oc-dialog-buttonrow boutons" id="buttons">'
-                        + '<a class="button primary" id="mp4">' + t('video_converter', '.MP4') + '</a>'
-                        + '<a class="button primary" id="avi">' + t('video_converter', '.AVI') + '</a>'
-                        + '<a class="button primary" id="m4v">' + t('video_converter', '.M4V') + '</a>'
-                        + '<a class="button primary" id="webm">' + t('video_converter', '.WEBM') + '</a>'
+                        + '<a class="button primary" id="mp4">' + t('audio_converter', '.MP4') + '</a>'
+                        + '<a class="button primary" id="avi">' + t('audio_converter', '.AVI') + '</a>'
+                        + '<a class="button primary" id="m4v">' + t('audio_converter', '.M4V') + '</a>'
+                        + '<a class="button primary" id="webm">' + t('audio_converter', '.WEBM') + '</a>'
                         + '</div>'
                     );
                     var finished = false;
@@ -202,7 +202,7 @@ $(document).ready(function () {
                                 $.ajax({
                                     type: "POST",
                                     async: "true",
-                                    url: OC.filePath('video_converter', 'ajax', 'convertHere.php'),
+                                    url: OC.filePath('audio_converter', 'ajax', 'convertHere.php'),
                                     data: data,
                                     beforeSend: function () {
                                         document.getElementById("loading").style.display = "block";
@@ -235,8 +235,8 @@ $(document).ready(function () {
                                             context.fileList.showFileBusyState(tr, false);
                                             close();
                                             OC.dialogs.alert(
-                                                t('video_converter', response.desc),
-                                                t('video_converter', 'Error converting ' + filename)
+                                                t('audio_converter', response.desc),
+                                                t('audio_converter', 'Error converting ' + filename)
                                             );
                                         }
                                     }
